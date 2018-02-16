@@ -1,6 +1,6 @@
 # levelup
 
-TODO
+A collection of exercises intended to increase DevOps and Software engineering skills.
 
 * Python 3.6+
 * Vagrant
@@ -21,7 +21,7 @@ Install required python packages.
 pip install -r requirements.txt
 ```
 
-TODO: test the daemon example
+Navigate to the desired exercise and read it's `README.md`.
 
 ## References
 
@@ -29,5 +29,6 @@ TODO: test the daemon example
   * https://www.vagrantup.com/docs/index.html
   * http://docs.ansible.com/ansible/latest/index.html
   * https://testinfra.readthedocs.io/
+  * https://docs.pytest.org/
 * Books
   * https://www.amazon.com/Linux-Programming-Interface-System-Handbook/dp/1593272200
