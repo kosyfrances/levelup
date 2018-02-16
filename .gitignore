@@ -1,0 +1,6 @@
+# vagrant
+.vagrant
+
+# python
+__pycache__
+.pytest_cache
