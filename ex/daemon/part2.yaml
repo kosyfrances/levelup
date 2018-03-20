@@ -1,0 +1,20 @@
+---
+- import_playbook: reset.yaml
+
+- name: compile and install part2 daemon
+  hosts: all
+  tasks:
+    - name: compile the daemon binary
+      command: make
+      args:
+        chdir: /vagrant/part2
+    - name: install the daemon binary and systemd service file
+      command: make install
+      become: yes
+      become_user: root
+      args:
+        chdir: /vagrant/part2
+    - name: reload the systemd daemon configuration
+      command: systemctl daemon-reload
+      become: yes
+      become_user: root

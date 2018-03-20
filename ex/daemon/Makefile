@@ -25,14 +25,14 @@ destroy:
 
 # configure the vagrant box for part1 and run tests
 test-part1: converge
-	vagrant ssh -c "sudo PROJECT=part1 bash -s" < vagrant/test.sh
 	vagrant ssh-config > $(TOP)/.vagrant/ssh-config
+	ansible-playbook --ssh-common-args '-F .vagrant/ssh-config' -i 'default,' part1.yaml
 	py.test --connection=ssh --ssh-config=$(TOP)/.vagrant/ssh-config --hosts=default part1/test_daemon.py
 
 # configure the vagrant box for part2 and run tests
 test-part2: converge
-	vagrant ssh -c "sudo PROJECT=part2 bash -s" < vagrant/test.sh
 	vagrant ssh-config > $(TOP)/.vagrant/ssh-config
+	ansible-playbook --ssh-common-args '-F .vagrant/ssh-config' -i 'default,' part2.yaml
 	py.test --connection=ssh --ssh-config=$(TOP)/.vagrant/ssh-config --hosts=default part2/test_daemon.py
 
 # run all available tests
