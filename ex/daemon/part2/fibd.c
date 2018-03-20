@@ -1,7 +1,5 @@
 /**
- * An example SystemV daemon. This was assembled from information contained
- * in The Linux Programming Interface, by Michael Kerrisk. See chapter 37
- * and section 55.6.
+ * An example SystemD daemon.
  */
 
 #include <stdbool.h>    // bool, true, false macros
