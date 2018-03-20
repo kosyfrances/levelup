@@ -30,7 +30,7 @@ The goal of this part is to write a SystemV compatible daemon. An example one th
 
 ## Part 2
 
-TODO: new-style daemon
+The goal of this part is to write a SystemD compatible daemon. An example one, modified from part1, has been provided. As before the example is written in C but any language is acceptable as long as the resulting binary follows the same rules.
 
 1. Read the `New-Style Daemons` section in the SystemD documentation [2].
 2. Run `make test-part2` and verify the tests pass.
