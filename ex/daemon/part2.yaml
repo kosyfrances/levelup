@@ -6,6 +6,8 @@
   tasks:
     - name: compile the daemon binary
       command: make
+      become: yes
+      become_user: root
       args:
         chdir: /vagrant/part2
     - name: install the daemon binary and systemd service file
