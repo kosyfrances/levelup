@@ -4,8 +4,13 @@ TOP := $(shell pwd)
 .PHONY: fibd clean install uninstall
 
 # build the daemon
-fibd: fibd.c
-	gcc -o $(TOP)/fibd $(TOP)/fibd.c
+# fibd: fibd.c
+# 	gcc -o $(TOP)/fibd $(TOP)/fibd.c
+
+# make the python daemon executable
+fibd:
+	cp fibd.py fibd
+	chmod +x fibd
 
 # remove build artifacts
 clean:
