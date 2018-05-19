@@ -1,0 +1,7 @@
+.tmp_versions
+.cache.mk
+.sscrypt.*
+Module.symvers
+modules.order
+sscrypt.ko
+sscrypt.mod.c
